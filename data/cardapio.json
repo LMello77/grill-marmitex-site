@@ -1,0 +1,43 @@
+{
+  "data_cardapio": "2025-11-08",
+  "pratos_principais": [
+    {
+      "id": 101,
+      "nome": "Feijoada Completa (Média)",
+      "descricao": "Arroz, feijoada, couve refogada, farofa e torresmo.",
+      "preco": 18.00,
+      "imagem_url": "images/marmita-feijoada.jpg"
+    },
+    {
+      "id": 102,
+      "nome": "Frango Grelhado Fit (Média)",
+      "descricao": "Arroz integral, filé de frango grelhado e brócolis no vapor.",
+      "preco": 16.50,
+      "imagem_url": "images/marmita-fit.jpg"
+    },
+    {
+      "id": 103,
+      "nome": "Parmegiana de Carne (Grande)",
+      "descricao": "Arroz branco, bife à parmegiana e batata frita.",
+      "preco": 22.00,
+      "imagem_url": "images/marmita-parmegiana.jpg"
+    }
+  ],
+  "bebidas": [
+    {
+      "id": 201,
+      "nome": "Coca-Cola Lata 350ml",
+      "preco": 5.00
+    },
+    {
+      "id": 202,
+      "nome": "Guaraná Antartica Lata 350ml",
+      "preco": 5.00
+    },
+    {
+      "id": 203,
+      "nome": "Água Mineral sem Gás 500ml",
+      "preco": 3.00
+    }
+  ]
+}
