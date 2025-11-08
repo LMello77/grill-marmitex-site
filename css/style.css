@@ -1,0 +1,181 @@
+/* =============================================
+   ESTILOS GERAIS E LAYOUT (Mobile-First)
+   ============================================= */
+
+/* Usando as variáveis para o layout principal */
+header, main, footer {
+    width: 100%;
+    /* Adiciona um preenchimento lateral padrão */
+    padding-left: var(--espacamento-padrao);
+    padding-right: var(--espacamento-padrao);
+}
+
+/* Centralizando o conteúdo com Flexbox */
+header, .hero, #sobre, footer {
+    display: flex;
+    flex-direction: column; /* Padrão mobile: tudo em coluna */
+    align-items: center;
+    text-align: center;
+    padding-top: var(--espacamento-medio);
+    padding-bottom: var(--espacamento-medio);
+}
+
+/* =============================================
+   HEADER / NAVEGAÇÃO
+   ============================================= */
+
+header {
+    background-color: var(--cor-branco);
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    font-family: var(--fonte-titulos);
+    color: var(--cor-primaria);
+}
+
+nav ul {
+    list-style: none; /* Remove bolinhas da lista */
+    display: flex;
+    gap: var(--espacamento-padrao); /* Espaço entre os links */
+    margin-top: var(--espacamento-padrao);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+nav a:hover {
+    color: var(--cor-primaria);
+}
+
+/* =============================================
+   CONTEÚDO PRINCIPAL (index.html)
+   ============================================= */
+
+.hero {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branco);
+}
+
+.hero h2 {
+    font-family: var(--fonte-titulos);
+}
+
+.btn-cta {
+    background-color: var(--cor-verde-sucesso);
+    color: var(--cor-branco);
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: var(--espacamento-padrao);
+}
+
+/* =============================================
+   CARDÁPIO (cardapio.html)
+   ============================================= */
+
+.menu-diario h2,
+.menu-diario h3 {
+    font-family: var(--fonte-titulos);
+    text-align: center;
+    margin-bottom: var(--espacamento-medio);
+}
+
+.menu-diario h3 {
+    margin-top: var(--espacamento-medio);
+    border-top: 1px solid #ddd;
+    padding-top: var(--espacamento-padrao);
+}
+
+/* Esta é a classe que demos aos cards via JS */
+.card-produto {
+    background-color: var(--cor-branco);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: var(--espacamento-padrao);
+    margin-bottom: var(--espacamento-padrao);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-produto img {
+    max-width: 100%; /* Imagem responsiva */
+    height: auto;
+    border-radius: 5px;
+}
+
+.card-produto h4 {
+    font-family: var(--fonte-titulos);
+    color: var(--cor-secundaria);
+    margin-top: 8px;
+}
+
+.card-produto .descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin: 8px 0;
+}
+
+.card-produto .preco {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--cor-primaria);
+}
+
+.btn-adicionar {
+    background-color: var(--cor-verde-sucesso);
+    color: var(--cor-branco);
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: var(--espacamento-padrao);
+}
+
+.btn-adicionar:hover {
+    opacity: 0.9;
+}/* =============================================
+   LAYOUT RESPONSIVO (Desktop)
+   ============================================= */
+
+/* @media (min-width: 768px) significa:
+   "Aplique estas regras APENAS se a tela for
+   maior ou igual a 768px (tamanho de tablet/desktop)"
+*/
+@media (min-width: 768px) {
+
+    /* 1. Centraliza o layout em telas grandes */
+    header, main, footer {
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* 2. HEADER com Flexbox (horizontal) */
+    header {
+        flex-direction: row; /* Em desktop, volta a ser linha */
+        justify-content: space-between; /* H1 para um lado, Nav para outro */
+    }
+
+    header nav ul {
+        margin-top: 0;
+    }
+
+    /* 3. CARDÁPIO COM GRID */
+    /* Este é o 'id' do container que buscamos no JS */
+    #lista-produtos {
+        display: grid;
+        
+        /* Cria 3 colunas de tamanho igual (1fr = 1 fração) */
+        grid-template-columns: 1fr 1fr 1fr; 
+        
+        /* Define o espaço entre os cards */
+        gap: var(--espacamento-padrao);
+    }
+}
