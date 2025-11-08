@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Carrinho - Grill Marmitex</title>
+    
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Grill Marmitex</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cardapio.html">Cardápio do Dia</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="carrinho-final">
+            <h2>Meu Pedido</h2>
+            
+            <div id="lista-carrinho">
+                </div>
+
+            <div id="total-carrinho">
+                <h3>Total: R$ <span id="valor-total">0,00</span></h3>
+            </div>
+
+            <form id="form-checkout">
+                <h3>Complete seu Pedido</h3>
+                
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                
+                <div>
+                    <label for="endereco">Endereço de Entrega:</label>
+                    <input type="text" id="endereco" name="endereco" required>
+                </div>
+
+                <button type="submit" class="btn-cta">Enviar Pedido via WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contato">
+        <p>Grill Marmitex &copy; 2025</p>
+        <p>Peça pelo WhatsApp: (XX) 9XXXX-XXXX</p>
+    </footer>
+
+    <script src="js/carrinho.js" defer></script>
+</body>
+</html>
