@@ -6,7 +6,7 @@
       "nome": "Feijoada Completa (Média)",
       "descricao": "Arroz, feijoada, couve refogada, farofa e torresmo.",
       "preco": 18.00,
-      "imagem_url": "images/marmita-feijoada.jpg"
+      "imagem_url": "images/marmita.jpg"
     },
     {
       "id": 102,
@@ -20,7 +20,7 @@
       "nome": "Parmegiana de Carne (Grande)",
       "descricao": "Arroz branco, bife à parmegiana e batata frita.",
       "preco": 22.00,
-      "imagem_url": "images/marmita-parmegiana.jpg"
+      "imagem_url": "images/parmegiana.jpg"
     }
   ],
   "bebidas": [
