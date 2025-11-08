@@ -1,0 +1,48 @@
+/* 1. DEFINIÇÃO DO DESIGN SYSTEM (VARIÁVEIS)
+  :root é o "chefe" do seu documento. 
+  Variáveis definidas aqui podem ser usadas em qualquer outro arquivo CSS.
+  Usamos o prefixo -- (dois hífens).
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;700&display=swap');
+
+/* 1. DEFINIÇÃO DO DESIGN SYSTEM (VARIÁVEIS)
+  :root {
+  ... (o resto do seu código)
+*/
+:root {
+    /* Paleta de Cores (Exemplo para "Grill Marmitex") */
+    --cor-primaria: #D95525;  /* Um laranja "quente" de comida */
+    --cor-secundaria: #333333; /* Um cinza-escuro para texto */
+    --cor-fundo: #F9F9F9;     /* Um cinza-claro para o fundo */
+    --cor-branco: #FFFFFF;     /* Branco para os cards */
+    --cor-verde-sucesso: #28a745; /* Cor para o botão de adicionar */
+
+    /* Tipografia (Fontes) */
+    --fonte-principal: 'Roboto', sans-serif; /* (Vamos precisar importar) */
+    --fonte-titulos: 'Montserrat', sans-serif; /* (Vamos precisar importar) */
+
+    /* Espaçamentos (Mobile-First) */
+    --espacamento-padrao: 16px;
+    --espacamento-medio: 24px;
+}
+
+/* 2. RESET GLOBAL E CONFIGURAÇÃO DE CAIXA (BOA PRÁTICA)
+  Isto remove margens padrão do navegador e faz o CSS
+  funcionar de forma mais previsível (box-sizing).
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    /* Isso faz com que 'padding' e 'border' não aumentem o tamanho total do elemento */
+}
+
+/* 3. CONFIGURAÇÕES GLOBAIS DO <body>
+  Aplicamos nossas variáveis pela primeira vez.
+*/
+body {
+    font-family: var(--fonte-principal); /* Define a fonte padrão */
+    background-color: var(--cor-fundo);   /* Define a cor de fundo */
+    color: var(--cor-secundaria);       /* Define a cor de texto padrão */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
